@@ -40,15 +40,27 @@ button {
     flex-flow: row wrap;
 }
 
+.row__wide {
+    max-width: 92rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
 .row .row {
-    margin-left: -0.625rem;
-    margin-right: -0.625rem;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 @media screen and (min-width: 40em) {
     .row .row {
-        margin-left: -0.9375rem;
-        margin-right: -0.9375rem;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -635,31 +647,41 @@ button {
     max-width: 100%;
 }
 
-.row.align-right {
+.align-right,
+.row.align-right,
+.row__wide.align-right {
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
 }
 
-.row.align-center {
+.align-center,
+.row.align-center,
+.row__wide.align-center {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
 }
 
-.row.align-justify {
+.align-justify,
+.row.align-justify,
+.row__wide.align-justify {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
-.row.align-spaced {
+.align-spaced,
+.row.align-spaced,
+.row__wide.align-spaced {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
-.row.align-top {
+.align-top,
+.row.align-top,
+.row__wide.align-top {
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -672,7 +694,8 @@ button {
     align-self: flex-start;
 }
 
-.row.align-bottom {
+.row.align-bottom,
+.row__wide.align-bottom {
     -webkit-align-items: flex-end;
     -ms-flex-align: end;
     align-items: flex-end;
@@ -685,7 +708,9 @@ button {
     align-self: flex-end;
 }
 
-.row.align-middle {
+.align-middle,
+.row.align-middle,
+.row__wide.align-middle {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -698,7 +723,8 @@ button {
     align-self: center;
 }
 
-.row.align-stretch {
+.row.align-stretch,
+.row__wide.align-stretch {
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;

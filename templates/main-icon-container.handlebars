@@ -1,5 +1,6 @@
 <div class="main__icon__container">
-    <div id="icon__link__1" class="icon__link__container icon__link__container__pink">
+    {{#each icon}}
+    <div id="icon__link__container" class="icon__link__container">
         <div class="icon__image__container">
             <img class="icon__image" src="./images/i_comp_white.svg" />
         </div>
@@ -7,4 +8,5 @@
             <p>{{text}}</p>
         </div>
     </div>
+    {{/each}}
 </div>

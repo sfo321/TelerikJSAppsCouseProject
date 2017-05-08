@@ -1,0 +1,29 @@
+    <div class="our__picture__gallery__container">
+        <div class="our__picture__gallery row align-center align-middle">
+            {{#each this}}
+            <div class="row picture__column__container">
+                <div class="freak__picture__container">
+                    <div class="freak__picture">
+                        <img class="freak__image" src="{{this.imageUrl}}" />
+                    </div>
+                    <div class="freak__info">
+                        <div class="freak__info__name">{{this.category}}</div>
+                        <div class="freak__info__job">{{this.price}}</div>
+                        <div class="freak__info__tel">{{this.type}}</div>
+                    </div>
+                </div>
+                <div class="freak__icons__container">
+                    <div class="freak__icon flex__center">
+                        <img class="freak__icon__image__small" src="./images/i_tel_white.svg" />
+                    </div>
+                    <div class="freak__icon flex__center">
+                        <img class="freak__icon__images" src="./images/i_mail_white.svg" />
+                    </div>
+                    <div class="freak__icon freak__icon__big flex__center">
+                        <img class="freak__icon__image__small" src="./images/i_info_white.svg" />
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>

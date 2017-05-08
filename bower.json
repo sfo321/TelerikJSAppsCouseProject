@@ -1,0 +1,26 @@
+{
+    "name": "web_front_end",
+    "description": "final project",
+    "main": "./build/app.js",
+    "authors": [
+        "sfo321"
+    ],
+    "license": "ISC",
+    "keywords": [
+        "chikiriki123"
+    ],
+    "homepage": "",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "^3.2.1",
+        "handlebars": "^4.0.5",
+        "sammy": "^0.7.6",
+        "toastr": "^2.1.3"
+    }
+}

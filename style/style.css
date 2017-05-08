@@ -1,7 +1,7 @@
 .body {
     background-attachment: fixed;
     background-clip: border-box;
-    background-image: url('../images/forside-03.jpg');
+    background-image: url('../images/home_small_small.jpg');
     background-origin: padding-box;
     background-position: 0% 0%;
     background-position-x: 50%;
@@ -50,6 +50,7 @@
 .footer,
 .footer__content,
 .main__advertising__container,
+.main__advertising__container__contact,
 .arrow__container,
 .who__we__are__container,
 .contact__us__container {
@@ -78,7 +79,8 @@
 
 .navigation__container,
 .footer__content,
-.main__advertising__container {
+.main__advertising__container,
+.main__advertising__container__contact {
     width: 960px;
 }
 
@@ -133,10 +135,12 @@
     width: 21.2vw;
     height: 7.2vw;
     margin-left: 5%;
+    margin-top: 10px;
 }
 
 .navigation__list__item>a {
     text-decoration: none;
+    font-weight: 500;
 }
 
 .logo__image {
@@ -147,7 +151,8 @@
     width: 35%;
 }
 
-.main__advertising__container {
+.main__advertising__container,
+.main__advertising__container__contact {
     margin: 0 auto;
     margin-top: 120px;
     flex-direction: column;
@@ -155,8 +160,16 @@
     height: 1%;
 }
 
+.main__advertising__container__contact {
+    margin-top: 19vw;
+}
+
 .about__us {
     margin-top: 290px;
+}
+
+.services {
+    margin-top: 270px;
 }
 
 .main__container {
@@ -164,10 +177,17 @@
     background-color: rgba(0, 0, 0, 0.39);
 }
 
-.main__container__text {
+.main__container__text,
+.main__container__text__contact {
     padding-top: 30px;
     margin: auto auto;
     position: relative;
+    text-align: center;
+    text-justify: center;
+}
+
+.main__container__text__contact {
+    padding-top: 0px;
 }
 
 .main__advertising {
@@ -176,6 +196,11 @@
     margin: 48px auto 40px auto;
     letter-spacing: 3px;
     font-weight: 300;
+}
+
+.main__advertising__contact {
+    font-size: 72px;
+    margin: 70px auto 70px auto;
 }
 
 .main__advertising__big {
@@ -237,6 +262,18 @@
     height: 25px;
 }
 
+.arrow__image__container__contact {
+    margin: 16.4vw auto 9vw auto;
+    width: 100px;
+    height: 25px;
+}
+
+.arrow__image__container__services {
+    margin: 240px auto 155px auto;
+    width: 100px;
+    height: 25px;
+}
+
 .who__we__are__container,
 .who__we__are__content__container {
     -ms-flex-pack: center;
@@ -249,6 +286,150 @@
     font-size: 24px;
     color: rgb(0, 0, 0);
     padding: 130px 0;
+}
+
+.form__label__red {
+    margin-top: 205px;
+}
+
+.form__label__red__middle {
+    margin-top: 95px;
+}
+
+.form__label__red>p,
+.form__label__red__bottom>p,
+.form__label__red__middle>p {
+    color: #ED1E79;
+}
+
+.form__label {
+    font-size: 21px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+.form__label__bottom {
+    font-size: 21px;
+    margin-top: 30px;
+}
+
+.form__label>p,
+.form__label__bottom>p {
+    line-height: 15px;
+    font-weight: 400;
+}
+
+.form__label__red__bottom>p {
+    line-height: 12px;
+    font-weight: 400;
+}
+
+.contact__us__form {
+    font-family: "Sansation";
+    font-weight: lighter;
+    font-size: 22px;
+}
+
+.contact__us__form__container {
+    padding: 48px 0 84px 0;
+    background-color: #fff;
+}
+
+.contact__us__form__label__text>p {
+    margin: -8px 0 20px 0;
+    color: #ED1E79;
+}
+
+.contact__us__form__label>p {
+    margin: 75px 0;
+    color: #ED1E79;
+    font-size: 55px;
+}
+
+.input__field {
+    width: 92%;
+    height: 50px;
+    border: 1px solid#ddd;
+    font-family: "Sansation";
+    font-weight: lighter;
+    border-radius: 8px;
+    padding-left: 15px;
+    font-size: 22px;
+    color: #ED1E79;
+    margin: 15px auto;
+}
+
+.input__field__textarea {
+    resize: none;
+    padding-top: 15px;
+    height: 215px;
+}
+
+.no__robot__auth {
+    width: 100%;
+    height: 90px;
+    color: #ED1E79;
+    margin-top: 15px;
+}
+
+.no__robot__auth__send {
+    width: 95%;
+    height: 35px;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(232, 131, 159);
+    padding-top: 15px;
+    margin-top: 33px;
+}
+
+.no__robot {
+    border: 1px solid#ddd;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.no__robot__auth__button {
+    width: 49%;
+}
+
+.no__robot__auth__refresh {
+    width: 10%;
+}
+
+.no__robot__auth__pic {
+    width: 35%;
+    margin-right: 2%;
+}
+
+.contact__us__form__info,
+.contact__us__form__info__tick {
+    text-align: center;
+    font-size: 20px;
+    width: 90%;
+}
+
+.contact__us__form__info {
+    font-weight: 400;
+    margin-top: 45px;
+    line-height: 35px;
+}
+
+.contact__us__form__info__tick {
+    margin-top: 15px;
+    color: #ED1E79;
+    font-size: 22px;
+}
+
+.contact__us__form__info__tick>p {
+    width: 50%;
+    margin: 34px 0 0 0;
+}
+
+.contact__us__form__info__tick>p::before {
+    content: url('../images/i_chavka_pink.svg');
+    margin-right: 10px;
+    margin-bottom: -7px;
 }
 
 .who__we__are__container__about__us {
@@ -281,9 +462,9 @@
     z-index: 15;
     position: absolute;
     width: 280px;
-    height: 240px;
+    height: 80px;
     left: 40px;
-    margin-top: -35px;
+    margin-top: 25px;
 }
 
 .who__we__are__logo__about__us {
@@ -316,6 +497,15 @@
     padding-top: 30px;
 }
 
+.flex__row {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
 .flex__center {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -342,14 +532,20 @@
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 30px;
-    height: 14vw;
-    width: 20vw;
+    height: 18vw;
+    width: 24vw;
+}
+
+.icon__image {
+    width: 100%;
+    height: 100%;
 }
 
 .icon__image__container {
-    width: 75%;
-    height: 70%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -359,6 +555,7 @@
     -ms-flex-align: flex-end;
     -webkit-align-items: flex-end;
     align-items: flex-end;
+    border: 1px solid #eee;
 }
 
 .icon__text__container>p {
@@ -367,10 +564,23 @@
 }
 
 .icon__link__container__pink,
-.pink__communication__container,
 .pink__communication__container__about__us {
     background-color: rgb(232, 131, 159);
     color: #eee;
+}
+
+.pink__communication__container {
+    color: #fff;
+    background-attachment: fixed;
+    background-clip: border-box;
+    background-image: url('../images/grass.jpg');
+    background-origin: padding-box;
+    background-position: 0% 0%;
+    background-position-x: 50%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-size: cover;
+    background-color: rgb(15, 24, 35);
 }
 
 .icon__link__container__white {
@@ -386,9 +596,20 @@
     background-color: rgb(255, 70, 160);
 }
 
+.separator {
+    height: 55px;
+}
+
 .white {
     background-color: #fff;
-    height: 55px;
+}
+
+.pink {
+    background-color: rgb(232, 131, 159) !important;
+}
+
+.blue {
+    background-color: rgb(126, 146, 175);
 }
 
 .our__picture__gallery__container {
@@ -412,7 +633,14 @@
     margin: 0;
 }
 
+.freak__picture {
+    width: 308px;
+    height: 410px;
+}
+
 .freak__image {
+    width: 100%;
+    height: 100%;
     border-bottom-right-radius: 70px;
 }
 
@@ -495,12 +723,12 @@
     -ms-flex-direction: column;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
-    color: rgb(255, 70, 160);
+    color: #3ad121;
     height: 850px;
 }
 
 .to__contact__us {
-    margin-top: 195px;
+    margin-top: 65px;
     font-size: 32px;
 }
 
@@ -525,7 +753,7 @@
 }
 
 .contact__phone__number:hover {
-    border-color: rgb(255, 70, 160);
+    border-color: #3ad121;
 }
 
 .contact__email {
@@ -540,13 +768,17 @@
     height: 100%;
 }
 
+.wide__container {
+    width: 100%;
+}
+
 .pink__communication {
     width: 80%;
     margin: 0 auto;
 }
 
 .pink__communication__container {
-    padding-top: 50px;
+    padding-top: 20px;
     height: 150px;
 }
 
@@ -579,6 +811,56 @@
     font-weight: 100;
     letter-spacing: 0.72vw;
     margin-top: 3.4vw;
+}
+
+.ring__us__blue {
+    background-image: url('../images/fon_small_blo.png');
+    background-repeat: repeat;
+    background-size: contain;
+    background-color: rgba(126, 146, 175, .4);
+}
+
+.ring__us__pink {
+    background-repeat: repeat;
+    background-size: cover;
+    background-color: rgb(232, 131, 159);
+}
+
+.ring__us__phone {
+    width: 100%;
+}
+
+.ring__us__phone__number,
+.ring__us__phone__content {
+    text-align: center;
+    color: #fff;
+    font-family: "Sansation";
+    font-weight: lighter;
+}
+
+.ring__us__phone__content>p {
+    font-size: 34px;
+    margin: 43px auto;
+    letter-spacing: 6px;
+}
+
+.ring__us__phone__number {
+    padding-top: 23px;
+    width: 52%;
+    margin: -2px auto 45px auto;
+    border-radius: 10px;
+    height: 107px;
+    color: #fff;
+}
+
+.ring__us__phone__number>p:first-child {
+    font-size: 28px;
+    margin: 0;
+}
+
+.ring__us__phone__number>p:last-child {
+    font-size: 64px;
+    margin-top: 25px;
 }
 
 .logo__image__about {
@@ -675,8 +957,8 @@
 
 @media screen and (max-width: 1284px) {
     .icon__link__container {
-        width: 19.8vw;
-        padding-bottom: 25px;
+        width: 24vw;
+        height: 18vw;
     }
     .icon__text__container>p {
         font-size: 1.3vw;
@@ -685,8 +967,8 @@
 
 @media screen and (max-width: 1172px) {
     .icon__link__container {
-        width: 19vw;
-        padding-bottom: 15px;
+        width: 24vw;
+        height: 18vw;
     }
     .icon__text__container>p {
         font-size: 1.3vw;
@@ -700,25 +982,12 @@
 }
 
 @media screen and (max-width: 1070px) {
-    .icon__link__container {
-        width: 19.1vw;
-        height: 15.3vw;
-    }
     .icon__text__container>p {
         font-size: 1.4vw;
-    }
-    .icon__image__container {
-        width: 50%;
-        height: 45%;
-        margin-top: 15px;
     }
 }
 
 @media screen and (max-width: 1016px) {
-    .icon__link__container {
-        width: 18.8vw;
-        height: 14.9vw;
-    }
     .pink__telephone__us {
         margin-top: 2vw;
     }
@@ -728,11 +997,15 @@
     .footer-content,
     .navigation__container,
     .main__advertising__container,
+    .main__advertising__container__contact,
     .who__we__are__container,
     .main__icon__container,
     .footer__navigation,
     .pink__communication__text {
         width: 100%;
+    }
+    .main__advertising__container__contact {
+        margin-top: 190px;
     }
     .main__container__text {
         padding-top: 0;
@@ -785,34 +1058,35 @@
         width: 180px;
         height: 160px;
     }
+    .main__advertising__contact {
+        margin: 70px auto 70px auto;
+    }
 }
 
 @media screen and (max-width: 967px) {
     .icon__link__container {
-        width: 18.6vw;
-        height: 14.8vw;
+        width: 24vw;
+        height: 18vw;
     }
 }
 
 @media screen and (max-width: 938px) {
-    .icon__link__container {
-        width: 18vw;
-        padding-bottom: 8px;
-    }
     .icon__text__container>p {
         font-size: 1.2vw;
+    }
+    .form__label,
+    .form__label__bottom,
+    .form__label__red>p,
+    .form__label__red__bottom>p,
+    .form__label__red__middle>p {
+        font-size: 2.3vw;
     }
 }
 
 @media screen and (max-width: 860px) {
     .icon__link__container {
-        width: 25.4vw;
-        height: 20.4vw;
-        padding-bottom: 10px;
-    }
-    .icon__image__container {
-        width: 50%;
-        height: 45%;
+        width: 24vw;
+        height: 18vw;
     }
     .icon__text__container>p {
         font-size: 14px;
@@ -855,7 +1129,6 @@
         height: 800px;
     }
     .to__contact__us {
-        margin-top: 160px;
         margin-bottom: 10px;
         letter-spacing: 4px;
     }
@@ -942,9 +1215,8 @@
         margin-top: 20px;
     }
     .icon__link__container {
-        width: 41vw;
-        height: 27vw;
-        padding-bottom: 30px;
+        width: 49vw;
+        height: 37vw;
     }
     .who__we__are__content {
         padding-right: 50px;
@@ -955,21 +1227,28 @@
     .pink__communication__content {
         text-align: center;
     }
+    .contact__us__form__label>p {
+        font-size: 45px;
+    }
+    .ring__us__phone__content>p {
+        font-size: 4vw;
+    }
+    .ring__us__phone__number>p:first-child {
+        font-size: 4vw;
+    }
+    .ring__us__phone__number>p:last-child {
+        font-size: 8vw;
+    }
 }
 
 @media screen and (max-width: 713px) {
     .icon__link__container {
-        width: 39vw;
-        height: 27vw;
-        padding-bottom: 30px;
+        width: 49vw;
+        height: 33vw;
     }
     .icon__text__container>p {
         font-size: 2.6vw;
         margin-top: 9%;
-    }
-    .icon__image__container {
-        width: 75%;
-        height: 70%;
     }
     .to__contact__us {
         padding: 0 30px;
@@ -992,9 +1271,6 @@
 }
 
 @media screen and (max-width: 625px) {
-    .icon__link__container {
-        width: 38vw;
-    }
     .footer__navigation__container {
         height: 500px;
     }
@@ -1006,20 +1282,12 @@
 
 @media screen and (max-width: 570px) {
     .icon__link__container {
-        width: 37vw;
-        padding-bottom: 8px;
-    }
-    .icon__image__container {
-        width: 55%;
-        height: 50%;
+        width: 49vw;
+        height: 33vw;
     }
 }
 
 @media screen and (max-width: 510px) {
-    .icon__link__container {
-        width: 34vw;
-        padding-bottom: 10px;
-    }
     .icon__text__container>p {
         font-size: 2.4vw;
     }
@@ -1101,12 +1369,10 @@
         left: 15px;
     }
     .icon__link__container {
-        width: 37vw;
-        height: 30vw;
-        padding-bottom: 10px;
+        width: 49vw;
+        height: 33vw;
     }
     .to__contact__us {
-        margin-top: 200px;
         padding: 0 30px;
         font-size: 30px;
         line-height: 50px;
@@ -1175,8 +1441,8 @@
 
 @media screen and (max-width: 461px) {
     .icon__link__container {
-        width: 35vw;
-        padding-bottom: 10px;
+        width: 49vw;
+        height: 33vw;
     }
     .main__advertising {
         font-size: 36px;
@@ -1188,9 +1454,6 @@
 }
 
 @media screen and (max-width: 399px) {
-    .icon__link__container {
-        width: 34vw;
-    }
     .pink__communication__text {
         margin-top: 5%;
         font-size: 24px;
@@ -1199,12 +1462,14 @@
         font-size: 54px;
         margin-bottom: 50px;
     }
+    .contact__us__form__label>p {
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 374px) {
-    .icon__link__container {
-        width: 33vw;
-    }
     .contact__media__logo {
         width: 300px;
         height: 68px;
@@ -1219,8 +1484,8 @@
 
 @media screen and (max-width: 352px) {
     .icon__link__container {
-        width: 31vw;
-        padding-bottom: 10px;
+        width: 98vw;
+        height: 64vw
     }
     .main__advertising {
         font-size: 26px;
@@ -1228,17 +1493,6 @@
     }
     .main__advertising__big {
         font-size: 44px;
-    }
-}
-
-@media screen and (min-width: 1275px) {
-    .pink__contact__us {
-        font-size: 20px;
-        letter-spacing: 3.8px;
-    }
-    .pink__telephone__us {
-        font-size: 65px;
-        letter-spacing: 9px;
     }
 }
 
@@ -1266,6 +1520,17 @@
     }
 }
 
+@media screen and (min-width: 1275px) {
+    .pink__contact__us {
+        font-size: 20px;
+        letter-spacing: 3.8px;
+    }
+    .pink__telephone__us {
+        font-size: 65px;
+        letter-spacing: 9px;
+    }
+}
+
 @media screen and (min-width: 1340px) {
     .who__we__are__logo {
         left: 15vw;
@@ -1275,6 +1540,11 @@
 @media screen and (min-width: 1400px) {
     .who__we__are__logo {
         left: 17vw;
+    }
+    .navigation__logo {
+        width: 280px;
+        height: 102px;
+        margin-left: 5%;
     }
 }
 

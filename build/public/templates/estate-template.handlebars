@@ -1,0 +1,8 @@
+{{#if @first}}
+<aside class="estate">
+    <h5 class="estate__heading estate__heading--first">{{this.heading}}</h5> {{else}}
+    <aside class="estate">
+        <h5 class="estate__heading">{{this.heading}}</h5> {{/if}}
+        <div class="estate__body"> {{this.content}}</div>
+    </aside>
+    

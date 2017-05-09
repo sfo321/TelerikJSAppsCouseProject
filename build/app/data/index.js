@@ -67,11 +67,11 @@ module.exports = {
     createNewEstate(estate) {
         const newEstate = {
             type: estate.type,
-            owner: estate.ownerId,
+            owner: estate.owner,
             info: estate.info,
             price: estate.price,
-            category: estate.category,
-            imageUrl: estate.imageUrl,
+            location: estate.location,
+            imageUrl: estate.image,
             images: estate.images || [],
             isDeleted: false
         };

@@ -15,13 +15,13 @@ const estateSchema = mongoose.Schema({
     },
     info: {
         type: String,
-        required: true
+        required: false
     },
     price: {
         type: String,
         required: true
     },
-    category: {
+    location: {
         type: String,
         required: true
     },

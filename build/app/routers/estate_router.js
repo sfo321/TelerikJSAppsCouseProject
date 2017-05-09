@@ -12,15 +12,16 @@ module.exports = (data) => {
             controller.getAllEstates)
         .get("/:id",
             controller.getEstateById)
-        .post("/post",
+        .post("/add",
             auth.isAuthenticated,
             controller.createEstate)
         .put("/remove/:id",
-            //auth.isAuthenticated,
+            auth.isAuthenticated,
+            dataMiddleware.isAuthor,
+            controller.removeEstate)
+        .put("/remove/:id",
+            auth.isAuthenticated,
             dataMiddleware.isAuthor,
             controller.removeEstate);
-    // .put("/remove",
-    //     //auth.isAuthenticated,
-    //     controller.removePostFromUser);
     return router;
 };

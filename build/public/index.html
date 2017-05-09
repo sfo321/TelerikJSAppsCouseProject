@@ -19,26 +19,41 @@
                     <a href="#/"><img class="logo__image" src="./images/mainLogo1.svg" /></a>
                 </div>
                 <div class="navigation__list">
-                    <ul class="navigation__links">
+                    <ul id="main-nav" class="navigation__links">
                         <li class="navigation__list__item">
                             <a href="#/">НАЧАЛО</a>
+                        </li>
+                        <li class="navigation__list__item">ПОТРЕБИТЕЛ
+                            <nav class="navigation--dropdown">
+                                <ul class="navigation--dropdown__list">
+                                    <li class="navigation--dropdown__list__item"><a href="#/login" class="navigation--dropdown__list__item__link">ВХОД</a></li>
+                                    <li class="navigation--dropdown__list__item"><a href="#/sign-up" class="navigation--dropdown__list__item__link">РЕГИСТРАЦИЯ</a></li>
+                                </ul>
+                            </nav>
                         </li>
                         <li class="navigation__list__item">
                             <a href="#/top">ТОП ИМОТИ</a>
                         </li>
                         <li class="navigation__list__item">
-                            <a href="./services.html">ГАЛЕРИЯ</a>
+                            <a href="#/estates">ДОБАВИ</a>
                         </li>
                         <li class="navigation__list__item">
-                            <a href="./contactUs.html">УСЛУГИ</a>
-                        </li>
-                        <li class="navigation__list__item">
-                            <a href="#">НАЕМИ</a>
+                            <a href="#/gallery">ГАЛЕРИЯ</a>
                         </li>
                     </ul>
                 </div>
-                <div class="navigation__toggle">
-                    <a href="#"><img class="sandwich__image" src="./images/Shape_1.png" /></a>
+                <div id="navresp" class="navigation__toggle">
+                    <img class="sandwich__image" src="./images/Shape_1.png" />
+                    <nav class="navigation--responsive">
+                        <ul class="navigation--responsive__list">
+                            <li class="navigation--responsive__list__item"> <a href="#/" class="navigation--responsive__list__item__link">Начало</a></li>
+                            <li class="navigation--responsive__list__item"> <a href="#/top" class="navigation--responsive__list__item__link">Топ имоти</a></li>
+                            <li class="navigation--responsive__list__item"> <a href="#/top" class="navigation--responsive__list__item__link">Добави</a></li>
+                            <li class="navigation--responsive__list__item"> <a href="#" class="navigation--responsive__list__item__link">Галерия</a></li>
+                            <li class="navigation--responsive__list__item"> <a href="#/login" class="navigation--responsive__list__item__link">Вход</a></li>
+                            <li class="navigation--responsive__list__item"> <a href="#/sign-up" class="navigation--responsive__list__item__link">Регистрация</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </nav>
         </div>
@@ -62,8 +77,8 @@
                     <li><a href="#">Услуги в чужбина</a></li>
                     <li><a href="#">Имоти в София</a></li>
                     <li><a href="#">Имоти на топ локации</a></li>
-                    <li><a href="#">Имоти в провинцията</a></li>
-                    <li><a href="#">Търсене</a></li>
+                    <li><a href="#/sign-up">Регистрация</a></li>
+                    <li><a href="#/login">Вход</a></li>
                 </ul>
             </div>
             <div class="footer__navigation__list__container">
@@ -94,6 +109,9 @@
     <script src="./script/templates_getter.js"></script>
     <script src="./controllers/home.js"></script>
     <script src="./controllers/top_estates.js"></script>
+    <script src="./controllers/users.js"></script>
+    <script src="./controllers/add_estate.js"></script>
+    <script src="./controllers/carousel.js"></script>
     <script src="./app.js"></script>
 </body>
 

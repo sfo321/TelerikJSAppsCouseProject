@@ -5,7 +5,7 @@ const estateController = {
         return {
             getAllEstates(req, res) {
                 data.getEstates({}, 24)
-                    .then(estates => res.status(200).json(posts))
+                    .then(estates => res.status(200).json(estates))
                     .catch(error => {
                         res.status(500).json(error);
                     });
@@ -19,6 +19,7 @@ const estateController = {
             },
             createEstate(req, res) {
                 let estate = req.body;
+                estate.owner = req.session.passport.user;
 
                 data.createNewEstate(estate)
                     .then((dbEstate) => {

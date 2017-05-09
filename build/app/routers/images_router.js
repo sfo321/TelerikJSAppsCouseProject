@@ -15,7 +15,7 @@ module.exports = (data) => {
         .get("/:title",
             controller.getByTitle)
         .post("/create",
-            //auth.isAuthenticated,
+            auth.isAuthenticated,
             controller.create);
     return router;
 };

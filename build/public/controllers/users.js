@@ -4,19 +4,20 @@ var controllers = controllers || {};
     function login(context) {
         (function login() {
             var component = $('#main');
-
-            $('#main').html('');
-            $('#caruzel___container').remove();
-            requester.get('/api/cards/all').then((result) => {
-                console.log(result);
-                templates.get('widget_template').then(function(template) {
-                    templates.get('login_template').then(function(tempol) {
-                        Handlebars.registerPartial('widget', template);
-                        component.prepend(tempol(result));
-                        attach();
+            (function main() {
+                const data = ['ВХОД'];
+                $('#main').html('');
+                templates.get('main_page_header').then(function(template) {
+                    $('#main').append(template(data));
+                    templates.get('login_template').then(function(template) {
+                        $('#arrow').after(template);
+                        templates.get('communication_container').then(function(template) {
+                            $('#login').after(template);
+                            attach();
+                        });
                     });
                 });
-            });
+            })();
 
             function attach() {
                 var regform = $('#form__login'),
@@ -60,7 +61,7 @@ var controllers = controllers || {};
                         toastr.success(`Login successful!`);
                         setTimeout(function() {
                             context.redirect('#/home');
-                        }, 800);
+                        }, 1800);
                     }).catch((err) => toastr.warning('Invalid name or password!'));
                 });
             }
@@ -70,19 +71,20 @@ var controllers = controllers || {};
     function register(context) {
         (function register() {
             var component = $('#main');
-
-            $('#main').html('');
-            $('#caruzel___container').remove();
-
-            requester.get('/api/cards/all').then((result) => {
-                templates.get('widget_template').then(function(template) {
-                    templates.get('single_template').then(function(tempol) {
-                        Handlebars.registerPartial('widget', template);
-                        component.prepend(tempol(result));
-                        attach();
+            (function main() {
+                const data = ['РЕГИСТРАЦИЯ'];
+                $('#main').html('');
+                templates.get('main_page_header').then(function(template) {
+                    $('#main').append(template(data));
+                    templates.get('single_template').then(function(template) {
+                        $('#arrow').after(template);
+                        templates.get('communication_container').then(function(template) {
+                            $('#register').after(template);
+                            attach();
+                        });
                     });
                 });
-            });
+            })();
 
             function attach() {
                 var regform = $('#form__register'),
@@ -123,7 +125,7 @@ var controllers = controllers || {};
                 validate('#password__register', /^[a-z0-9_-]{6,25}$/i);
                 validate('#password__again', /^[a-z0-9_-]{6,25}$/i);
                 validate('#username__register', /^[a-z0-9_-]{6,25}$/i);
-                validate('#imageUrl', /(http(s?))\:\/\//i);
+                validate('#phone', /[0-9-()+]{6,20}/i);
 
                 submitBtn.on('click', function() {
                     let options = {
@@ -133,8 +135,7 @@ var controllers = controllers || {};
                             email: $('#email').val(),
                             username: $('#username__register').val(),
                             password: $('#password__register').val(),
-                            gender: $('#gender__type').val(),
-                            imageUrl: $('#imageUrl').val()
+                            phoneNumber: $('#phone').val()
                         }
                     };
 
@@ -142,7 +143,7 @@ var controllers = controllers || {};
                         toastr.success(`User registerd!`);
                         setTimeout(function() {
                             context.redirect('#/users/login');
-                        }, 800);
+                        }, 1800);
                     }).catch((err) => toastr.warning(err.statusCode));
                 });
             }

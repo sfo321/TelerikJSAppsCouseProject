@@ -15,51 +15,58 @@
 
         this.get('#/top', controllers.top.top);
 
-        // this.get('#/blog/single', function(context) {
-        //     context.redirect('#/blogsingle');
-        // });
+        this.get('#/gallery', controllers.carousel.all);
 
-        // this.get('#/blogsingle', controllers.blog.single);
+        this.get('#/estates', controllers.estates.addEstate);
 
-        // this.get('#/blog/info', function(context) {
-        //     context.redirect('#/bloginfo');
-        // });
+        this.get('#/users/login', function(context) {
+            context.redirect('#/login');
+        });
+        this.get('#/login', controllers.users.login);
 
-        // this.get('#/bloginfo', controllers.blog.info);
+        this.get('#/sign-up', controllers.users.register);
 
-        // this.get('#/gallery/pics', function(context) {
-        //     context.redirect('#/pics');
-        // });
-
-        // this.get('#/pics', controllers.gallery.pics);
-
-        // this.get('#/gallery', controllers.gallery.gallery);
-
-        // this.get('#/login', function(context) {
-        //     context.redirect('#/log');
-        // });
-        // this.get('#/users/login', function(context) {
-        //     context.redirect('#/log');
-        // });
-        // this.get('#/log', controllers.users.login);
-
-        // this.get('#/register', function(context) {
-        //     context.redirect('#/sign-up');
-        // });
-        // this.get('#/users/register', function(context) {
-        //     context.redirect('#/sign-up');
-        // });
-        // this.get('#/sign-up', controllers.users.register);
-
+        this.get('#/register', function(context) {
+            context.redirect('#/sign-up');
+        });
+        this.get('#/users/register', function(context) {
+            context.redirect('#/sign-up');
+        });
     });
 
     $(function() {
         sammyApp.run('#/');
-
-
         $(window).on('resize', function() {
             var win = $(this);
             console.log(win.width());
+        });
+        $('#main-nav').on('mouseenter', '.navigation__list__item', function(ev) {
+            var target = $(ev.currentTarget);
+            if (target.hasClass('navigation__list__item') && !target.children('.navigation--dropdown').hasClass('navigation--dropdown--show')) {
+                target.children('.navigation--dropdown').addClass('navigation--dropdown--show').stop();
+            }
+            ev.stopPropagation();
+            ev.preventDefault();
+        });
+        $('#main-nav').off('mouseleave');
+        $('#main-nav').on('mouseleave', '.navigation__list__item', function(ev) {
+            var target = $(ev.currentTarget);
+            if (target.hasClass('navigation__list__item') && target.children('.navigation--dropdown').hasClass('navigation--dropdown--show')) {
+                target.children('.navigation--dropdown').removeClass('navigation--dropdown--show');
+            }
+        });
+
+        $('#navresp').on('click', function(ev) {
+            var target = $(ev.target),
+                nav = $('.navigation--responsive');
+            if (target.hasClass('sandwich__image') && !nav.hasClass('is-visible')) {
+                nav.removeClass('is-hidden').addClass('is-visible');
+            } else if (target.hasClass('sandwich__image') && nav.hasClass('is-visible')) {
+                nav.removeClass('is-visible').addClass('is-hidden');
+            }
+            if (target.hasClass('navigation--responsive__list__item__link')) {
+                nav.removeClass('is-visible').addClass('is-hidden');
+            }
         });
     });
 }());

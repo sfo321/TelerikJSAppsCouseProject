@@ -18,15 +18,15 @@ module.exports = {
             .catch(error => res.status(500).json({ message: 'It broke!(again)' }));
     },
     isAuthor(req, res, next) {
-        data.findPostById(req.params.id)
-            .then(post => {
+        data.findEstateById(req.params.id)
+            .then(estate => {
 
-                if (!post) {
-                    res.status(404).json({ message: 'No post with such id!' });
+                if (!estate) {
+                    res.status(404).json({ message: 'No estate with such id!' });
                     return;
                 }
 
-                if (req.user && req.user._id.toString() === post.author._id.toString()) {
+                if (req.user && req.user._id.toString() === estate.owner._id.toString()) {
                     next();
 
                 } else {

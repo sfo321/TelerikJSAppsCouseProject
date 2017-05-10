@@ -15,7 +15,7 @@ var controllers = controllers || {};
                 templates.get('main_page_header').then(function(template) {
                     $('#main').append(template(data));
                     templates.get('carousel_template').then((template) => {
-                        $('#arrow').append(template(imagesArray));
+                        $('#arrow').after(template(imagesArray));
                         templates.get('communication_container').then(function(template) {
                             $('#carousel_container').after(template);
                             attach();
@@ -23,11 +23,10 @@ var controllers = controllers || {};
 
                     });
                 }).catch((err) => console.log(err.status));
-            })();
+            });
 
 
             function attach() {
-                console.log('hahaaaa');
                 $('#carousel_container').on('click', function(ev) {
                     var elements = $('.carrousel__image'),
                         container = $('.carrousel__image__container'),
